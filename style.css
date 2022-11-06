@@ -29,6 +29,10 @@ body {
     font-weight: var(--fw-text);
 }
 
+label {
+    display: none;
+}
+
 .app {
     /* Take note of this feature, allows to set a semi-transparent color layer over the background-image */
     box-shadow: inset 0 0 0 1000px rgba(226, 14, 14, 0.562);
