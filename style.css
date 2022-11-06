@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --red: hsl(0, 100%, 74%); 
+    --dark-red: hsl(0, 58%, 68%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+    --fs-small: .7rem;
+    /* using calc() function we can set responsive font size*/
+    --fs: calc(.8rem + 0.090625vw);
+    --fs-title: calc(2rem + 0.090625vw);
+    --ff: 'Poppins', sans-serif;
+    --fw-text: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff);
+    font-size: var(--fs);
+    font-weight: var(--fw-text);
+}
+
+.app {
+    /* Take note of this feature, allows to set a semi-transparent color layer over the background-image */
+    box-shadow: inset 0 0 0 1000px rgba(226, 14, 14, 0.562);
+    background: url('./images/bg-intro-mobile.png') repeat;
+    /* as children´s margin top is affecting parent layout, by setting this porperty allows us to normalize side-effects */
+    overflow: auto;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 65.625rem;
+    margin: 5rem auto;
+}
+
+.ctn-right {
+    max-width: 31.25rem;
+    margin: 0 auto;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    line-height: 1.2;
+    font-size: var(--fs-title);
+    color: #fff;
+    max-width: 20.625rem;
+    margin: 0 auto;
+}
+
+.content p {
+    margin-top: 1.5rem;
+    overflow-wrap: break-word;
+    width: 85%;
+    color: #fff;
+    margin: 1.8rem auto;
+    max-width: 31.25rem;
+}
+
+.advise {
+    background-color: var(--blue);
+    padding: 1em 5em;
+    color: #fff;
+    border-radius: 0.625rem;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.247);
+}
+
+.advise span {
+    font-weight: var(--fw-semibold);
+}
+
+.advise p {
+    text-align: center;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 0.625rem;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.625rem 0.313rem rgba(0, 0, 0, 0.247);
+}
+
+form input {
+    color: var(--dark-blue);
+    font-weight: var(--fw-bold);
+    margin-top: 1rem;
+    width: 100%;
+    height: 3.125rem;
+    border-radius: 0.313rem;
+    border: solid 0.063rem rgba(0, 0, 0, 0.089);
+    padding-left: 1rem;    
+}
+
+form button {
+    display: block;
+    width: 100%;
+    background-color: var(--green);
+    border: none;
+    border-radius: 0.313rem;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1.5rem 2rem;
+    font-weight: var(--fw-bold);
+    box-shadow: inset 0 -5px rgba(0, 0, 0, 0.384);
+    margin: 1em 0 2em;
+}
+
+form button:hover {
+    background-color: hsla(154, 59%, 51%, 0.425);
+    box-shadow: inset 0 -0.313rem rgba(0, 0, 0, 0.123);
+    cursor: pointer;
+}
+
+form p {
+    font-size: var(--fs-small);
+    color: var(--grayish-blue);
+    line-height: 1.8;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.link {
+    font-weight: var(--fw-semibold);
+    color: var(--red);
+    cursor: pointer;
+}
+
+/* form class modifiers */
+
+.incorrect {
+    border: 0.125rem solid var(--dark-red)
+}
+
+.incorrect-text {
+    color: var(--dark-red);
+    text-align: right;
+}
+
+
+@media (min-width: 1200px) {
+    .app {
+        background: url('./images/bg-intro-desktop.png') no-repeat cover;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .ctn-right {
+        width: 50%;
+    }
+
+    .ctn-left {
+        width: 50%;
+    }
+
+    .content {
+        padding: 10rem 0;
+    }
+
+    .content h1 {
+        margin: 0 0;
+        text-align: left;
+    }
+
+    .content p {
+        margin: 2rem 0 0;
+        text-align: left;
+    }
+
+
+}
